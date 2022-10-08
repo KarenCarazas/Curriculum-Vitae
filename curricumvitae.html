@@ -1,1 +1,113 @@
+<!DOCTYPE HTML>
+<html>
 
+<head>
+    <meta charset="utf-8" />
+    <title>CV</title>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            document.querySelector('#new-ex').onsubmit = () => {
+			
+                const li = document.createElement('li');
+                li.innerHTML += document.querySelector('#ex').value;
+
+                document.querySelector('#exs').append(li);
+				
+			
+                document.querySelector('#ex').value = '';
+				
+
+                return false;
+				
+				
+            };
+
+        });
+		
+		document.addEventListener('DOMContentLoaded', () => {
+            document.querySelector('#new-fo').onsubmit = () => {
+
+                const li = document.createElement('li');
+                li.innerHTML += document.querySelector('#fo').value;
+
+                document.querySelector('#fos').append(li);
+
+                document.querySelector('#fo').value = '';
+
+                return false;
+            };
+
+        });
+		
+		document.addEventListener('DOMContentLoaded', () => {
+            document.querySelector('#new-id').onsubmit = () => {
+
+                const li = document.createElement('li');
+                li.innerHTML += document.querySelector('#id').value;
+
+                document.querySelector('#ids').append(li);
+
+                document.querySelector('#id').value = '';
+
+                return false;
+            };
+
+        });
+		
+		document.addEventListener('DOMContentLoaded', () => {
+            document.querySelector('#new-ap').onsubmit = () => {
+
+                const li = document.createElement('li');
+                li.innerHTML += document.querySelector('#ap').value;
+
+                document.querySelector('#aps').append(li);
+
+                document.querySelector('#ap').value = '';
+
+                return false;
+            };
+
+        });
+    </script>
+
+</head>
+
+<body>
+    <h1>
+        <center>Curriculum Vitae</center>
+    </h1>
+    <h2>Experiencia Laboral</h2>
+    <form id="new-ex">
+        <input id="ex" autocomplete="off" type="text" required>
+        <input type="submit" >
+		
+    </form>
+    <ol id="exs">
+    </ol>
+	<br>
+	<h2>Formacion</h2>
+    <form id="new-fo">
+        <input id="fo" autocomplete="off" type="text" required>
+        <input type="submit">
+    </form>
+    <ol id="fos">
+    </ol>
+	<br>
+	<h2>Idiomas</h2>
+    <form id="new-id">
+        <input id="id" autocomplete="off" type="text" required>
+        <input type="submit">
+    </form>
+    <ol id="ids">
+    </ol>
+	<br>
+	<h2>Aptitudes/Habilidades</h2>
+    <form id="new-ap">
+        <input id="ap" autocomplete="off" type="text" required>
+        <input type="submit">
+    </form>
+    <ol id="aps">
+    </ol>
+</body>
+
+</html>
