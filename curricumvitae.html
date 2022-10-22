@@ -1,30 +1,32 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <html>
 
+<title>Curriculum Vitae</title>
+
 <head>
+<form action="C:\Users\LEGION\Documents\examen.php" target="_blank">
     <meta charset="utf-8" />
-    <title>CV</title>
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             document.querySelector('#new-ex').onsubmit = () => {
-			
+
                 const li = document.createElement('li');
                 li.innerHTML += document.querySelector('#ex').value;
 
                 document.querySelector('#exs').append(li);
-				
-			
+
+
                 document.querySelector('#ex').value = '';
-				
+
 
                 return false;
-				
-				
+
+
             };
 
         });
-		
-		document.addEventListener('DOMContentLoaded', () => {
+
+        document.addEventListener('DOMContentLoaded', () => {
             document.querySelector('#new-fo').onsubmit = () => {
 
                 const li = document.createElement('li');
@@ -38,8 +40,8 @@
             };
 
         });
-		
-		document.addEventListener('DOMContentLoaded', () => {
+
+        document.addEventListener('DOMContentLoaded', () => {
             document.querySelector('#new-id').onsubmit = () => {
 
                 const li = document.createElement('li');
@@ -53,8 +55,8 @@
             };
 
         });
-		
-		document.addEventListener('DOMContentLoaded', () => {
+
+        document.addEventListener('DOMContentLoaded', () => {
             document.querySelector('#new-ap').onsubmit = () => {
 
                 const li = document.createElement('li');
@@ -73,41 +75,161 @@
 </head>
 
 <body>
-    <h1>
-        <center>Curriculum Vitae</center>
-    </h1>
-    <h2>Experiencia Laboral</h2>
-    <form id="new-ex">
-        <input id="ex" autocomplete="off" type="text" required>
-        <input type="submit" >
-		
-    </form>
-    <ol id="exs">
-    </ol>
-	<br>
-	<h2>Formacion</h2>
-    <form id="new-fo">
-        <input id="fo" autocomplete="off" type="text" required>
-        <input type="submit">
-    </form>
-    <ol id="fos">
-    </ol>
-	<br>
-	<h2>Idiomas</h2>
-    <form id="new-id">
-        <input id="id" autocomplete="off" type="text" required>
-        <input type="submit">
-    </form>
-    <ol id="ids">
-    </ol>
-	<br>
-	<h2>Aptitudes/Habilidades</h2>
-    <form id="new-ap">
-        <input id="ap" autocomplete="off" type="text" required>
-        <input type="submit">
-    </form>
-    <ol id="aps">
-    </ol>
-</body>
+    <table align="center" cellpadding="2" width="800" height="500">
+        <tr>
+            <th colspan="2" bgcolor="grey">
+                <img src="https://karlacsphotography.com/wp-content/uploads/2020/03/MG_3442_2.jpg" height="160px" width="200px" align="left" />
+                <h1>
+
+                    <font color="white" face="Arial" size="11px">
+
+                        <div class="elem-group"> <label for="name">Nombres y Apellidos</label></font>
+                    <br>
+                    <input type="text" id="name" name="visitor_name" size='40' placeholder="Nombres y apellidos" required> </div>
+                    <br>
+
+                </h1>
+            </th>
+        </tr>
+        <td width="100" height="400" bgcolor="pink">
+
+            <div>
+                <font color="black" face="" size="4px">
+                    <p align="left"><b> CONTACTO</b></font>
+                <hr/>
+            </div>
+            <div class="elem-group"> <label for="born">Fecha de nacimiento</label>
+                <br>
+                <input type="date" id="born" name="visitor_born" required> </div>
+            <br>
+            <div class="elem-group"> <label for="ocupation">Ocupación</label>
+                <br>
+                <input type="text" id="ocupation" name="visitor_ocupation" placeholder="Ocupacion" required></div>
+            <br>
+            <div class="elem-group"> <label for="number">Telefono</label>
+                <br>
+                <input type="tel" id="number" name="visitor_number" placeholder="Numero de telefono" required> </div>
+            <br>
+            <div class="elem-group"> <label for="mail">Correo electrónico</label>
+                <br>
+                <input type="email" id="mail" name="visitor_mail" size='25' placeholder="ejemplo@gmail.com" required> </div>
+            <br>
+            <div class="elem-group"> <label for="nation">Nacionalidad</label>
+                <br>
+                <select id="nation" name='visitor_nation' required>
+        <option value="0">...</option>
+        <option value="1">Perú</option>
+        <option value="2">Chile</option>
+        <option value="3">Bolivia</option>
+        <option value="4">Argentina</option>
+        </select>
+            </div>
+            <div><br>
+
+                <font color="black" face="" size="4px">
+                    <p align="left"><b> IDIOMAS</b></font>
+                <hr/>
+            </div>
+            <form id="new-id">
+                <input id="id" autocomplete="off" type="text" required>
+                <input type="submit">
+            </form>
+            <ol id="ids">
+            </ol>
+
+            <br>
+            <div><br>
+
+                <font color="black" face="" size="4px">
+                    <p align="left"><b> LENGUAJES DE PROGRAMACION</b></font>
+                <hr/>
+            </div>
+            <div class="elem-group"> <label for="program">Lenguajes de programación</label>
+                <br>
+                <input type="radio" name="python" value="p" > Python
+                <br>
+                <input type="radio" name="c++" value="c" > C++
+                <br>
+                <input type="radio" name="javascript" value="j" > JavaScript
+            </div>
+            <br>
+            <div><br>
+
+                <font color="black" face="" size="4px">
+                    <p align="left"><b>APTITUDES</b></font>
+                <hr/>
+            </div>
+            <form id="new-ap">
+                <input id="ap" autocomplete="off" type="text" required>
+                <input type="submit">
+            </form>
+            <ol id="aps">
+            </ol>
+
+            <br>
+            <font color="black" face="" size="4px">
+                <p align="left"><b>HABILIDADES</b></font>
+            <hr/>
+            </div>
+            <div class="elem-group"> <label for="ability">Habilidades</label>
+                <br>
+                <input type="checkbox" name="casilla" >Liderazgo
+                <br>
+                <input type="checkbox" name="casilla" >Ética de trabajo
+                <br>
+                <input type="checkbox" name="casilla" >Capacidad de análisis
+                <br>
+                <input type="checkbox" name="casilla" >Iniciativa
+                <br>
+                <input type="checkbox" name="casilla" >Comunicación verbal
+            </div>
+            <br>
+        </td>
+
+        <td width="250" height="400" bgcolor="white">
+            <div>
+
+                <body text="black">
+                    <font size="4px">
+                        <p align="left"><b>PERFIL</b></font>
+                    <hr/>
+            </div>
+            <div class="elem-group"> <label for="message">Perfil</label>
+                <br>
+                <textarea id="message" name="visitor_message" cols="40" rows="41" style="resize: both;" required></textarea> </div>
+            <br>
+            <font face="" size="4px">
+                <p align="left"><b>EXPERIENCIA LABORAL</b></font>
+            <hr/>
+            </div>
+
+            <form id="new-ex">
+                <input id="ex" autocomplete="off" type="text" required>
+                <input type="submit">
+
+            </form>
+            <ol id="exs">
+            </ol>
+            <br>
+
+            <div><br>
+                <font color="black" face="" size="4px">
+                    <p align="left"><b>FORMACION</b></font>
+                <hr/>
+            </div>
+
+            <form id="new-fo">
+                <input id="fo" autocomplete="off" type="text" required>
+                <input type="submit">
+            </form>
+            <ol id="fos">
+            </ol>
+            <br>
+        </td>
+    </table>
+    </body>
+	<input type="submit" value="Enviar la información">
+
+</form>
 
 </html>
